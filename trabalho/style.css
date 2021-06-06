@@ -1,0 +1,195 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1100px;
+	margin:0 auto;
+	padding: 0 2%;
+}
+
+.clearfix {
+  overflow: auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+html,body{
+	height: 100%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.header{
+	height: 200px;
+	padding: 20px 0;
+}
+
+.logo{
+	width:50%
+}
+
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+
+.menu{
+	padding-top: 0px;
+	width: 50%;
+	text-align: right;
+	/* line-height: 85px; */
+}
+
+
+.menu > ul{
+	margin:0;
+	padding:0;
+	margin-top: 20px;
+}
+
+.menu > ul > li{
+	list-style-type: none;
+	display: inline-block;
+	border-radius:90px;
+	margin-left: 10px;
+	padding:5px;
+}
+
+.menu > ul > li:active,
+.menu > ul > li:hover{
+    border-radius:90px;
+    background-color: #fe0000;
+}
+
+.menu > ul > li:active > a,
+.menu > ul > li:hover > a{
+    color:#fff !important;
+}
+
+
+.menu a{
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	/* margin-right: 10px; */
+}
+
+section.sobre{
+	height: calc(100% - 103px);
+}
+
+.extras{
+	position: absolute;
+	bottom: -650px;
+	right: -700px;
+	width: 1200px;
+	height:1200px;
+	border-radius: 50%;
+	background-color: red;
+}
+
+.social{
+	position: absolute;
+	right:0;
+	top: 50%;
+}
+
+.social img{
+	display: block;
+	width: 40px;
+	margin: 10px 0;
+}
+
+.texto-sobre{
+	margin-bottom:-20px;
+	border:-5px;
+	/* margin-left: 155px; */
+}
+
+.texto-sobre h1{
+	font-size: 38px;
+	margin-top: 40px;
+}
+
+.paragrafo{
+	font-size: 20px;
+	margin: 50px 500px 20px 5px;
+}
+
+.more{
+	background-color:#f00;
+	border:none;
+	padding:5px 20px;
+	border-radius:90px;
+	color:#fff;
+	text-decoration:none;
+}
+
+.thumb{
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+	display: flex;
+}
+
+.thumb li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	cursor:pointer;
+	transition: 0.5s;
+}
+
+.thumb li:hover{
+ transform: translateY(-15px);
+}
+
+.thumb li img{
+	max-width: 60px;
+}
+
+
+
+
+@media (max-width: 600px)
+{
+    .menu,
+    .logo{
+    	width:100%;
+    }
+
+    html,body{
+    	overflow-y:auto
+    }
+
+    .fl,
+    .fr{
+    	display:block;
+    	float:none;
+    }
+
+	.extras{
+		position:static;
+	}
+
+	.menu > ul > li
+	{
+		display: block;
+		text-align:left;
+		border:solid 1px #f00;
+		margin-bottom:2px
+	}
+}
+
